@@ -1,5 +1,4 @@
 # JustAI - Sistema de Consulta Jurídica Inteligente 🤖⚖️
-### Metalúrgica Mococa S/A
 **Autor:** João Pedro Pizoli Carvalho
 
 ## 📜 Sobre o Projeto
@@ -126,7 +125,6 @@ Para contribuir com o projeto ou implementar novas funcionalidades:
 - O sistema em produção está hospedado no servidor Ubuntu da empresa.
 - Certifique-se de que todas as dependências estão instaladas antes de executar a aplicação.
 
-## 📧 Contato
-Para mais informações ou suporte, entre em contato com o departamento de TI da Metalúrgica Mococa S/A.
 
-*Desenvolvido por João Pedro Pizoli Carvalho para a Metalúrgica Mococa S/A - 2025*
+
+*Desenvolvido por João Pedro Pizoli Carvalho*
