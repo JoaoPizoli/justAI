@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icone.png" type="image/png">
+    <title>Consulta Jurídica Inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="header">
+        <span class="title">Consulta Jurídica Inteligente</span>
+        <div class="company-info">
+          <a title="RODOVIA SP 340 KM 274 74">
+            METALURGICA MOCOCA S/A
+          </a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="logo-container">
+          <img src="img/Logo_Metalurgica_Preto-removebg-preview.png" alt="Logo Metalúrgica Mococa" class="centered-logo">
+        </div>
+        
+        <form id="searchForm" class="search-form" autocomplete="off">
+          <div class="form-group">
+            <label for="topic" class="form-label">Tópico para Jurisprudência:</label>
+            <div class="form-input-container">
+              <input type="text" id="topic" name="topic" placeholder="Digite o tópico/assunto para pesquisa de Jurisprudência" class="form-input" required title="Preencha este campo" autocomplete="off">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="description" class="form-label">Descrição:</label>
+            <div class="form-input-container">
+              <textarea id="description" name="description" placeholder="Descreva o seu caso" class="form-input" required autocomplete="off"></textarea>
+              <small class="mt-1" style="font-size: 0.65rem; display: block;"><a>OBS: A IA usará a Descrição para escrever uma defesa e pesquisar Jurisprudências adicionais.</a></small>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="tribunal-dropdown" class="form-label">Tribunal:</label>
+            <div class="form-input-container">
+              <div class="tribunal-dropdown">
+                <button type="button" id="tribunal-dropdown" class="tribunal-dropdown-btn" aria-expanded="false">Selecione...</button>
+                <div class="tribunal-dropdown-menu">
+                  <div class="tribunal-search">
+                    <input type="text" placeholder="Buscar tribunal..." autocomplete="off">
+                  </div>
+                  <div class="tribunal-options">
+                    <div class="tribunal-option select-all-option">
+                      <input type="checkbox" id="todos" class="tribunal-input">
+                      <label for="todos" class="tribunal-label">Selecionar Todos</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="stf" class="tribunal-input" value="stf">
+                      <label for="stf" class="tribunal-label">Supremo Tribunal Federal (STF)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="stj" class="tribunal-input" value="stj">
+                      <label for="stj" class="tribunal-label">Supremo Tribunal de Justiça (STJ)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tst" class="tribunal-input" value="tst">
+                      <label for="tst" class="tribunal-label">Tribunal Superior do Trabalho (TST)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tse" class="tribunal-input" value="tse">
+                      <label for="tse" class="tribunal-label">Tribunal Superior Eleitoral (TSE)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="stm" class="tribunal-input" value="stm">
+                      <label for="stm" class="tribunal-label">Superior Tribunal Militar (STM)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tcu" class="tribunal-input" value="tcu">
+                      <label for="tcu" class="tribunal-label">Tribunal de Contas da União (TCU)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tnu" class="tribunal-input" value="tnu">
+                      <label for="tnu" class="tribunal-label">Turma Nacional de Uniformização (TNU)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tru" class="tribunal-input" value="tru">
+                      <label for="tru" class="tribunal-label">Turma Regional de Uniformização (TRU)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="cnj" class="tribunal-input" value="cnj">
+                      <label for="cnj" class="tribunal-label">Conselho Nacional de Justiça (CNJ)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="carf" class="tribunal-input" value="carf">
+                      <label for="carf" class="tribunal-label">Conselho Administrativo de Recursos Fiscais (CARF)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tj" class="tribunal-input" value="tj">
+                      <label for="tj" class="tribunal-label">Tribunal de Justiça (TJ)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tfr" class="tribunal-input" value="tfr">
+                      <label for="tfr" class="tribunal-label">Tribunal Federal Regional (TFR)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="trt" class="tribunal-input" value="trt">
+                      <label for="trt" class="tribunal-label">Tribunal Regional do Trabalho (TRT)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tre" class="tribunal-input" value="tre">
+                      <label for="tre" class="tribunal-label">Tribunal Regional Eleitoral (TRE)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tjm" class="tribunal-input" value="tjm">
+                      <label for="tjm" class="tribunal-label">Tribunal de Justiça Militar (TJM)</label>
+                    </div>
+                    <div class="tribunal-option">
+                      <input type="checkbox" id="tce" class="tribunal-input" value="tce">
+                      <label for="tce" class="tribunal-label">Tribunal de Contas do Estado (TCE)</label>
+                    </div>
+                  </div>
+                  <div id="selectedCount">Nenhum tribunal selecionado</div>
+                </div>
+              </div>
+            </div>
+            <div id="dropdown-backdrop" class="dropdown-backdrop"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="source" class="form-label">Ordenar por:</label>
+            <div class="form-input-container">
+              <select id="source" name="source" class="form-select" required autocomplete="off">
+                <option class="periodo" value="recent">Mais Recentes</option>
+                <option class="periodo" value="relevant">Mais Relevantes</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Consultar</button>
+        </form>
+      </div>
+    </div>
+    
+    <div id="loading-overlay" class="loading-overlay d-none">
+      <div class="loading-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js?v=1.0.1"></script>
+  </body>
+</html>

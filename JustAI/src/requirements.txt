@@ -1,0 +1,19 @@
+# Biblioteca de FastAPI e servidor
+fastapi==0.104.1
+uvicorn==0.23.2
+
+# Web scraping
+crawl4ai==0.3.1
+
+# Google AI
+google-generativeai==0.3.1
+
+# Utilitários
+python-dotenv==1.0.0
+asyncio==3.4.3
+
+# Para manipulação de PDF e DOCX (usados na UI)
+# Observação: Essas bibliotecas são utilizadas no frontend via CDN,
+# mas podem ser necessárias se implementadas também no backend
+# pdfkit==1.0.0
+# python-docx==0.8.11
